@@ -1,0 +1,66 @@
+1. Concurrencia y Paralelismo
+	Concurrencia - Logico --> Multitareas --> Software
+	Paralelismo  - Fisica --> Capacidad   --> Hardware
+
+2. Procesos y Hilos
+	Programas --> Se ejecutan en Procesos 
+	Hilos     --> Unidades de Ejecucion de un programa
+
+3. Modelos de Programacion Concurrente
+	- Memoria Compartida
+	- Mensajes
+	- Informacion Paralela
+
+4. Manejo de Hilo
+	- Thread
+	- Las diferentes formas de construccion de Hilo
+		- Funcion sin parametro
+		- Funciones con parametro (por valor y Referencia)
+		- Uso del lambda
+		- Hilos de metodos de clases (El almacenamiento de un objeto y
+				metodos)
+			struct clase_A {
+				void metodo() {}
+			};
+		
+			clase_A::metodo(class_A* this) {
+			}
+
+			class clase_A:
+			  def __init__(self): 
+				...
+			  def metodo(self):
+				...
+5. Modelo de Memoria Compartida
+	- Race Condicion / Data Race
+		- Dos hilos compiten por un mismo recurso.
+		- Data Race --> Son las consecuencias de no contralar 
+			el race condicion
+			Invariancia --> Integridad de la informacion
+	- mutex
+		Definir una seccion critica
+			mtx.lock()  
+				....
+			mtx.unlock()
+		Atomicidad de operacion
+	- atomic
+		Instrucciones individuales (operaciones aritmeticas, simples)
+		exchange()
+		compare_exchange_weak()
+		compare_exchange_strong()
+	- condition_variable
+		- Permiten la comunicacion o coordinacion entre hilos
+			- notify_one() / notify_all() --> Notificar a hilos
+			- wait() --> Mantiene el lock dormido y lo activa 
+				al momento de realizar la notificion
+
+		- wait(unique_lock); --> wait espurio
+		- wait(unique_lock, condicion_logica);
+			condicion logica representada por un callable o lambda
+
+6. Modelo de Mensajeria
+	Future/Promise
+
+
+
+
