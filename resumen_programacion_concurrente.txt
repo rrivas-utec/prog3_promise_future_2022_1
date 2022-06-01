@@ -17,15 +17,16 @@
 		- Funcion sin parametro
 		- Funciones con parametro (por valor y Referencia)
 		- Uso del lambda
-		- Hilos de metodos de clases (El almacenamiento de un objeto y
-				metodos)
+		- Hilos de metodos de clases (El almacenamiento de un objeto y metodos)
 			struct clase_A {
 				void metodo() {}
 			};
 		
+			// Internamente el metodo se define
 			clase_A::metodo(class_A* this) {
 			}
 
+			# Esta referencia es visible en python
 			class clase_A:
 			  def __init__(self): 
 				...
@@ -34,8 +35,7 @@
 5. Modelo de Memoria Compartida
 	- Race Condicion / Data Race
 		- Dos hilos compiten por un mismo recurso.
-		- Data Race --> Son las consecuencias de no contralar 
-			el race condicion
+		- Data Race --> Son las consecuencias de no contralar el race condicion
 			Invariancia --> Integridad de la informacion
 	- mutex
 		Definir una seccion critica
